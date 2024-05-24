@@ -25,7 +25,7 @@ export const generateProducts = async (req, res) => {
 
     res.status(201).json(product);
   } catch (e) {
-    req.logger.error(`Error al generar productos: ${e}`);
+    req.logger.error(`Error al generar productos ${e}`);
     res.status(500).send(e);
   }
 };
